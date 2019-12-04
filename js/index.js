@@ -49,7 +49,20 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 const navBar = document.getElementsByTagName("a");
 for (let i = 0; i < 6; i++) {
   navBar[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+  navBar[i].style.color = "green";
 }
+
+let nav = document.querySelector("nav");
+console.log(nav);
+const newNavItem = document.createElement("a");
+newNavItem.textContent = "Hello";
+nav.prepend(newNavItem);
+newNavItem.style.color = "green";
+
+const newerNavItem = document.createElement("a");
+newerNavItem.textContent = "Goodbye";
+nav.appendChild(newerNavItem);
+newerNavItem.style.color = "green";
 
 const mainTitle = document.querySelector("h1");
 mainTitle.textContent = siteContent["cta"]["h1"];
